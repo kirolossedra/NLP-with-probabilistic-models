@@ -27,7 +27,7 @@ Let's consider an example with a simple set of POS tags:
 | VB      | 0 | 0  | 0  |
 | O       | 6 | 0  | 8 |
 
-This matrix shows the probability of transitioning from one POS tag to another. For example, the probability of transitioning from NN to VB is 0.5.
+To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities
 
 ### Emission Matrix B:
 
