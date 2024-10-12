@@ -121,11 +121,7 @@ The Viterbi algorithm uses **C** and **D** together:
 Let's consider an example with a simple set of POS tags:
 
 - POS tags: NN (noun), VB (verb), O (other)
-- Sentences:  <span style="color: orange;">in</span> <span style="color: black;">a</span> <span style="color: blue;">station</span> <span style="color: black;">of</span> <span style="color: black;">the</span> <span style="color: black;">metro</span>
-
-<span style="color: black;">the</span> <span style="color: blue;">apparition</span> <span style="color: black;">of</span> <span style="color: blue;">these</span> <span style="color: black;">faces</span> <span style="color: black;">in</span> <span style="color: black;">the</span> <span style="color: black;">crowd</span> <span style="color: black;">:</span>
-
-<span style="color: blue;">petals</span> <span style="color: black;">on</span> <span style="color: black;">a</span> <span style="color: black;">wet</span> <span style="color: black;">,</span> <span style="color: black;">black</span> <span style="color: black;">bough</span> <span style="color: black;">.</span>
+- Sentences: <code style="color : cyan">in a station of the metro</code>
 
 
 ### Transition Matrix A:
