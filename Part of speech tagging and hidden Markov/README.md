@@ -1,4 +1,4 @@
-$${\color{red}Welcome \space \color{lightblue}To \space \color{lightgreen}Github}$$
+
 
 
 Here's the reformatted text with LaTeX formatting for the equations, followed by an example to explain how each matrix might look like.
@@ -124,7 +124,7 @@ The Viterbi algorithm uses **C** and **D** together:
 Let's consider an example with a simple set of POS tags:
 
 - POS tags: NN (noun), VB (verb), O (other)
-- Sentences: $${\color{in a station of the metro}Red}$$
+- Sentences: $${\color{orange}<s> \space \color{lightblue}To \space \color{lightgreen}Github}$$
 
 
 ### Transition Matrix A:
