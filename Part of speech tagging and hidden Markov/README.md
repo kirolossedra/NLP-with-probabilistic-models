@@ -43,7 +43,7 @@ To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities th
 P(NN \mid O) = \frac{C(O, NN) }{\sum_{j=1}^{N} C(O, t_j)    } =  \frac{6} {14 }
 ```
 
- but sometimes probability is 0 to avoid division by zero we use this formula instead
+ but sometimes probability is 0 to avoid division by zero we use the following formula instead(that includes smoothing):
 
  ```math
 P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}
