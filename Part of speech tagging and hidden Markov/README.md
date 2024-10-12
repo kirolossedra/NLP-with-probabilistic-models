@@ -4,7 +4,9 @@
 
 Purpose: Maps the probability of transitioning from one part-of-speech (POS) tag to another.
 
-Equation: $$P(ti | ti-1) = C(ti-1,ti) + ε / (Σj=1 to N C(ti-1,tj) + N*ε)$$
+Equation: $$
+P(t_i | t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}
+$$
 
 In-depth explanation:
 A is a square matrix where both rows and columns represent POS tags (NN, VB, O) plus an initial state (π). Each element A[i,j] represents the probability of transitioning from tag i to tag j.
