@@ -21,10 +21,10 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
 
 $P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}$
 
-  represents the probability of transitioning from tag \( i \) to tag \( j \).
+  represents the probability of transitioning from tag  $i$ to tag $j$.
   
 - The equation incorporates **smoothing** to avoid zero probabilities:
-  - \( C(t_{i-1}, t_i) \) is the count of transitions from tag \( i \) to \( j \)
+  - $C(t_{i-1}, t_i)$ is the count of transitions from tag $i$ to $j$
   - \( \varepsilon \) is a small positive value added to all counts (smoothing factor)
   - \( N \) is the number of possible tags
 
