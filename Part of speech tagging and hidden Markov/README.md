@@ -56,9 +56,9 @@ referring to the same example above we will use each words and check if associat
 
 |         | in   | a  | station  | of | the | metro | appraition | these | faces |  crowd | petals | on | a | wet | black | bough | 
 |---------|-------|-------|-------|-------  |---------|-------|-------|-------| ------|---------|-------|-------|-------|------|-------|-------|
-| NN      | 0.8   | 0.1   | 0.1   |
-| VB      | 0.1   | 0.7   | 0.2   |
-| O       | 0.1   | 0.2   | 0.7   |
+| NN      | 0   | 0   | 1   |
+| VB      | 0   | 0   | 0   |
+| O       | 2  | 2   | 0   |
 
 This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
 
