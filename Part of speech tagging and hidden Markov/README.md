@@ -1,6 +1,57 @@
 
 
 
+## Example:
+
+Let's consider an example with a simple set of POS tags:
+
+- POS tags: NN (noun), VB (verb), O (other)
+- Sentences: $${\color{orange} \< s \> \space \color{lightblue}To \space \color{lightgreen}Github}$$
+
+
+### Transition Matrix A:
+
+|         | NN   | VB   | O    |
+|---------|------|------|------|
+| π       | 0.6  | 0.3  | 0.1  |
+| NN      | 0.4  | 0.5  | 0.1  |
+| VB      | 0.3  | 0.2  | 0.5  |
+| O       | 0.2  | 0.4  | 0.4  |
+
+This matrix shows the probability of transitioning from one POS tag to another. For example, the probability of transitioning from NN to VB is 0.5.
+
+### Emission Matrix B:
+
+|         | dog   | runs  | fast  |
+|---------|-------|-------|-------|
+| NN      | 0.8   | 0.1   | 0.1   |
+| VB      | 0.1   | 0.7   | 0.2   |
+| O       | 0.1   | 0.2   | 0.7   |
+
+This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
+
+### Probability Matrix C (for three words):
+
+|         | dog   | runs  | fast  |
+|---------|-------|-------|-------|
+| NN      | 0.48  |       |       |
+| VB      | 0.03  |       |       |
+| O       | 0.01  |       |       |
+
+For the first word, "dog", the initial probabilities are calculated using the initial state (π) and emission probabilities.
+
+### Backpointer Matrix D:
+
+|         | dog   | runs  | fast  |
+|---------|-------|-------|-------|
+| NN      | 0     |       |       |
+| VB      | 0     |       |       |
+| O       | 0     |       |       |
+
+For the first word, the backpointer values are initialized to 0. For subsequent words, the backpointers will store the index of the most likely previous tag.
+
+
+
 Here's the reformatted text with LaTeX formatting for the equations, followed by an example to explain how each matrix might look like.
 
 ---
@@ -119,52 +170,4 @@ The Viterbi algorithm uses **C** and **D** together:
 
 ---
 
-## Example:
-
-Let's consider an example with a simple set of POS tags:
-
-- POS tags: NN (noun), VB (verb), O (other)
-- Sentences: $${\color{orange} \< s \> \space \color{lightblue}To \space \color{lightgreen}Github}$$
-
-
-### Transition Matrix A:
-
-|         | NN   | VB   | O    |
-|---------|------|------|------|
-| π       | 0.6  | 0.3  | 0.1  |
-| NN      | 0.4  | 0.5  | 0.1  |
-| VB      | 0.3  | 0.2  | 0.5  |
-| O       | 0.2  | 0.4  | 0.4  |
-
-This matrix shows the probability of transitioning from one POS tag to another. For example, the probability of transitioning from NN to VB is 0.5.
-
-### Emission Matrix B:
-
-|         | dog   | runs  | fast  |
-|---------|-------|-------|-------|
-| NN      | 0.8   | 0.1   | 0.1   |
-| VB      | 0.1   | 0.7   | 0.2   |
-| O       | 0.1   | 0.2   | 0.7   |
-
-This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
-
-### Probability Matrix C (for three words):
-
-|         | dog   | runs  | fast  |
-|---------|-------|-------|-------|
-| NN      | 0.48  |       |       |
-| VB      | 0.03  |       |       |
-| O       | 0.01  |       |       |
-
-For the first word, "dog", the initial probabilities are calculated using the initial state (π) and emission probabilities.
-
-### Backpointer Matrix D:
-
-|         | dog   | runs  | fast  |
-|---------|-------|-------|-------|
-| NN      | 0     |       |       |
-| VB      | 0     |       |       |
-| O       | 0     |       |       |
-
-For the first word, the backpointer values are initialized to 0. For subsequent words, the backpointers will store the index of the most likely previous tag.
 
