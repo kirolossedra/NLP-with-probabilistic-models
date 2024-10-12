@@ -52,6 +52,8 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
  
 ### Populating the Emission Matrix B:
 
+referring to the same example above we will use each words and check if dependnencies among different Parts of sentence
+
 |         | dog   | runs  | fast  |
 |---------|-------|-------|-------|
 | NN      | 0.8   | 0.1   | 0.1   |
