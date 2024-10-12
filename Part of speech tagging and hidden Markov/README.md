@@ -72,9 +72,9 @@ In that case the matrix will look like this
 
 |         | I   | watch  | a  | play | volleyball 
 |---------|-------|-------|-------|-------  |---------|
-| NN      | 0   | 0   | 1   |
-| VB      | 0   | 0   | 0   |
-| O       | 2  | 2   | 0   | 
+| NN      | 0   | 0   |  0  | 1 | 1 |
+| VB      | 0   | 1   | 0   | 1 | 0 |
+| O       | 2  | 0   | 1   |  0 | 0 |
 
 
 
