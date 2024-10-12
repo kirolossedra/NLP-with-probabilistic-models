@@ -16,6 +16,10 @@ Let's consider an example with a simple set of POS tags:
 
 
   
+| Header 1               | Header 2             |
+|------------------------|----------------------|
+| <span style="color:red;">Red Cell</span>    | Normal Cell           |
+| <span style="background-color:yellow;">Yellow Cell</span> | Normal Cell          |
 
 
 ### Transition Matrix A:
