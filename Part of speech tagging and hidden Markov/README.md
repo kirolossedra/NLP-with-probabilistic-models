@@ -6,7 +6,8 @@
 Let's consider an example with a simple set of POS tags:
 
 - POS tags: NN (noun), VB (verb), O (other)
-- Sentences: $${\color{orange} \< s \> \space \color{lightblue}in a \space \color{lightgreen}station  \space \color{lightblue}of the \space \color{lightgreen}metro }$$
+- Sentences: $${\color{orange} \< s \> \space \color{lightblue}in \space a \space \color{lightgreen}station  \space \color{lightblue}of the \space \color{lightgreen}metro }$$
+  $${\color{orange} \< s \> \space \color{lightblue}the \space \color{lightgreen}apparation  \space \color{lightblue}of \space these \space \color{lightgreen}faces  }$$
 
 
 ### Transition Matrix A:
