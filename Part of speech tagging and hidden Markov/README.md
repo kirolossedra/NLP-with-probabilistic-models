@@ -12,8 +12,16 @@ Maps the probability of transitioning from one part-of-speech (POS) tag to anoth
 P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}
 ```
 
+
+```math
+```
+
 ### In-depth explanation:
-- **A** is a square matrix where both rows and columns represent POS tags (e.g., NN, VB, O) plus an initial state (π). Each element \( $$ A[i,j] $$ \) represents the probability of transitioning from tag \( i \) to tag \( j \).
+- **A** is a square matrix where both rows and columns represent POS tags (e.g., NN, VB, O) plus an initial state (π). Each element
+```math
+  A[i,j]
+```
+  represents the probability of transitioning from tag \( i \) to tag \( j \).
   
 - The equation incorporates **smoothing** to avoid zero probabilities:
   - \( C(t_{i-1}, t_i) \) is the count of transitions from tag \( i \) to \( j \)
