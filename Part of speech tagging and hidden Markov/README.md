@@ -80,7 +80,7 @@ In that case the matrix will look like this
 here we will deal with the probabilities using smoothing as the previous table: 
 
  ```math
-P(w_i \mid t_i) = \frac{C(t_{i}, w_i) + \varepsilon}{\sum_{j=1}^{V} C(t_{i}, w_j) + N \cdot \varepsilon}
+P(w_i \mid t_i) = \frac{C(t_{i}, w_i) + \varepsilon}{\sum_{j=1}^{V} C(t_{i}, w_j) + N \cdot \varepsilon} =  \frac{C(t_{i}, w_i) + \varepsilon}{ C(t_{i}) + N \cdot \varepsilon}
 ```
 
 
