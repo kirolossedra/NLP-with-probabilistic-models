@@ -13,9 +13,6 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
 ```
 
 
-```math
-```
-
 ### In-depth explanation:
 - **A** is a square matrix where both rows and columns represent POS tags (e.g., NN, VB, O) plus an initial state (π). Each element
 ```math
