@@ -1,3 +1,6 @@
+$${\color{red}Welcome \space \color{lightblue}To \space \color{lightgreen}Github}$$
+
+
 Here's the reformatted text with LaTeX formatting for the equations, followed by an example to explain how each matrix might look like.
 
 ---
