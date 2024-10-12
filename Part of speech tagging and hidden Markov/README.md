@@ -38,6 +38,10 @@ To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities th
 | VB      | 0 | 0  | 0  | 0 |
 | O       | 6 | 0  | 8 |14  | 
 
+
+```math
+P(NN \mid O) = \frac{C(O, NN) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}
+```
 ### Emission Matrix B:
 
 |         | dog   | runs  | fast  |
