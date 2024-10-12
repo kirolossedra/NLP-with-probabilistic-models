@@ -25,7 +25,7 @@ $P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{
   
 - The equation incorporates **smoothing** to avoid zero probabilities:
   - $C(t_{i-1}, t_i)$ is the count of transitions from tag $i$ to $j$
-  - $\varepsilon  is a small positive value added to all counts (smoothing factor)
+  - $\varepsilon$  is a small positive value added to all counts (smoothing factor)
   - \( N \) is the number of possible tags
 
 - The denominator normalizes the probabilities.
