@@ -5,11 +5,9 @@ I apologize for the brevity of my previous explanation. You're right that a more
 Purpose: Maps the probability of transitioning from one part-of-speech (POS) tag to another.
 
 Equation:  
-math 
-```
-P(ti | ti-1) = C(ti-1,ti) + ε / (Σj=1 to N C(ti-1,tj) + N*ε)
-```
-
+```math
+ P(ti | ti-1) = C(ti-1,ti) + ε / (Σj=1 to N C(ti-1,tj) + N*ε)
+ ```
 In-depth explanation:
 A is a square matrix where both rows and columns represent POS tags (NN, VB, O) plus an initial state (π). Each element A[i,j] represents the probability of transitioning from tag i to tag j.
 
