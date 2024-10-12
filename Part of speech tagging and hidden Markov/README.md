@@ -40,7 +40,7 @@ To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities th
 
 
 ```math
-P(NN \mid O) = \frac{C(O, NN) }{\sum_{j=1}^{N} C(O, t_j)  = \frac{6} {14 }  }
+P(NN \mid O) = \frac{C(O, NN) }{\sum_{j=1}^{N} C(O, t_j)    } =  \frac{6} {14 }
 ```
 ### Emission Matrix B:
 
