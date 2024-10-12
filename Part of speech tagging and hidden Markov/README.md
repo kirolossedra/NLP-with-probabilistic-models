@@ -121,7 +121,7 @@ The Viterbi algorithm uses **C** and **D** together:
 Let's consider an example with a simple set of POS tags:
 
 - POS tags: NN (noun), VB (verb), O (other)
-- Sentences: <code style="color : cyan">in a station of the metro</code>
+- Sentences: $${\color{in a station of the metro}Red}$$
 
 
 ### Transition Matrix A:
