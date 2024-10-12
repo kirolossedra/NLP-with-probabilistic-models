@@ -50,7 +50,7 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
 ```
 
  
-### Emission Matrix B:
+### Populating the Emission Matrix B:
 
 |         | dog   | runs  | fast  |
 |---------|-------|-------|-------|
