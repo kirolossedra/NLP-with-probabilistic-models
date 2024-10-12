@@ -11,7 +11,7 @@ Let's consider an example with a simple set of POS tags:
 
   - $${\color{orange} \< s \> \space \color{lightblue}the \space \color{lightgreen}apparation  \space \color{lightblue}of \space these \space \color{lightgreen}faces \space \color{lightblue}in \space the \space \color{lightgreen} crowd    }$$
 
-  - $${\color{orange} \< s \> \space \color{lightblue}the \space \color{lightgreen}apparation  \space \color{lightblue}of \space these \space \color{lightgreen}faces \space \color{lightblue}in \space the \space \color{lightgreen} crowd    }$$
+  - $${\color{orange} \< s \> \space \color{lightgreen}petals  \space \color{lightblue}on \space a \space  wet, \space black \space  \color{lightgreen}bough}$$
 
 
 
