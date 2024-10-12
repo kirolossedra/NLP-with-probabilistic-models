@@ -67,6 +67,15 @@ a more sophisticated example to further explain the population of this matrix
   - $${\color{orange} \< s \> \space \color{lightblue}I  \space \color{lightgreen}watch  \space \color{lightblue}a  \space the \space \color{lightgreen}play }$$
 
   - $${\color{orange} \< s \> \space \color{lightblue}I \space \color{violet}play  \space \color{lightgreen}volleyball}$$
+In that case the matrix will look like this
+
+
+|         | I   | watch  | a  | play | volleyball 
+|---------|-------|-------|-------|-------  |---------|
+| NN      | 0   | 0   | 1   |
+| VB      | 0   | 0   | 0   |
+| O       | 2  | 2   | 0   | 
+
 
 
 This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
