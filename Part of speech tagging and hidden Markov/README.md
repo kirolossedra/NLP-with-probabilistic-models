@@ -58,7 +58,16 @@ referring to the same example above we will use each words and check if associat
 |---------|-------|-------|-------|-------  |---------|-------|-------|-------| ------|---------|-------|-------|-------|------|-------|-------|
 | NN      | 0   | 0   | 1   |
 | VB      | 0   | 0   | 0   |
-| O       | 2  | 2   | 0   |
+| O       | 2  | 2   | 0   | 
+
+
+a more sophisticated example to further explain the population of this matrix 
+
+- Sentences:
+  - $${\color{orange} \< s \> \space \color{lightblue}I \space a \space \color{lightgreen}watch  \space \color{lightblue}a  \space the \space \color{lightgreen}play }$$
+
+  - $${\color{orange} \< s \> \space \color{lightblue}the \space \color{lightgreen}apparation  \space \color{lightblue}of \space these \space \color{lightgreen}faces \space \color{lightblue}in \space the \space \color{lightgreen} crowd    }$$
+
 
 This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
 
