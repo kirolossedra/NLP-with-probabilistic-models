@@ -22,10 +22,10 @@ Let's consider an example with a simple set of POS tags:
 
 |         | NN   | VB   | O    |
 |---------|------|------|------|
-| π       | 0.6  | 0.3  | 0.1  |
-| NN      | 0.4  | 0.5  | 0.1  |
-| VB      | 0.3  | 0.2  | 0.5  |
-| O       | 0.2  | 0.4  | 0.4  |
+| π       | 1  | 0  | 2  |
+| NN      | 0 | 0 | 6 |
+| VB      | 0 | 0  | 0  |
+| O       | 6 | 0  | 8 |
 
 This matrix shows the probability of transitioning from one POS tag to another. For example, the probability of transitioning from NN to VB is 0.5.
 
