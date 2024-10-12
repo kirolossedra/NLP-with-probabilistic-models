@@ -52,7 +52,7 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
  
 ### Populating the Emission Matrix B:
 
-referring to the same example above we will use each words and check if dependnencies among different Parts of sentence
+referring to the same example above we will use each words and check if association between words and POS, this is more apparent when talking about play as a verb and as a noun for example. 
 
 |         | dog   | runs  | fast  |
 |---------|-------|-------|-------|
