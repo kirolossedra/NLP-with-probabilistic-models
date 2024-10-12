@@ -27,7 +27,16 @@ Let's consider an example with a simple set of POS tags:
 | VB      | 0 | 0  | 0  |
 | O       | 6 | 0  | 8 |
 
-To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities
+To compute $$P(NN|O)$$ we have to add the sum column to get the probabilities then A becomes
+
+### Transition Matrix A:
+
+|         | NN   | VB   | O    | Sum
+|---------|------|------|------|---------|
+| π       | 1  | 0  | 2  | 3 |
+| NN      | 0 | 0 | 6 | 6 |
+| VB      | 0 | 0  | 0  | 0 |
+| O       | 6 | 0  | 8 |14  | 
 
 ### Emission Matrix B:
 
