@@ -18,6 +18,9 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
 ```math
   A[i,j]
 ```
+
+$P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}$
+
   represents the probability of transitioning from tag \( i \) to tag \( j \).
   
 - The equation incorporates **smoothing** to avoid zero probabilities:
