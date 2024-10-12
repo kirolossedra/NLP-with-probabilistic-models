@@ -54,8 +54,8 @@ P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i
 
 referring to the same example above we will use each words and check if association between words and POS, this is more apparent when talking about play as a verb and as a noun for example. 
 
-|         | dog   | runs  | fast  |
-|---------|-------|-------|-------|
+|         | in   | a  | station  | of | the | metro | appraition | these | faces |  crowd | petals | on | a | wet | black | bough | 
+|---------|-------|-------|-------|-------  |---------|-------|-------|-------| ------|---------|-------|-------|-------|------|-------|-------|
 | NN      | 0.8   | 0.1   | 0.1   |
 | VB      | 0.1   | 0.7   | 0.2   |
 | O       | 0.1   | 0.2   | 0.7   |
