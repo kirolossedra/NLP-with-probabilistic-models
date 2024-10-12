@@ -77,6 +77,13 @@ In that case the matrix will look like this
 | O       | 2  | 0   | 1   |  0 | 0 |
 
 
+here we will deal with the probabilities using smoothing as the previous table: 
+
+ ```math
+P(w_i \mid t_i) = \frac{C(t_{i}, w_i) + \varepsilon}{\sum_{j=1}^{V} C(t_{i}, w_j) + N \cdot \varepsilon}
+```
+
+
 
 This matrix shows the probability of each word being emitted by a particular POS tag. For instance, the word "runs" is most likely associated with the VB tag (0.7 probability).
 
