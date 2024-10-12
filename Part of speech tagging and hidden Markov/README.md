@@ -4,9 +4,8 @@
 
 Purpose: Maps the probability of transitioning from one part-of-speech (POS) tag to another.
 
-Equation: $$
-P(t_i | t_{i-1}) = \frac{C(t_{i-1}, t_i) + \varepsilon}{\sum_{j=1}^{N} C(t_{i-1}, t_j) + N \cdot \varepsilon}
-$$
+Equation: ![Equation](https://latex.codecogs.com/png.latex?P(t_i%20%7C%20t_%7Bi-1%7D)%20%3D%20%5Cfrac%7BC(t_%7Bi-1%7D%2C%20t_i)%20%2B%20%5Cvarepsilon%7D%7B%5Csum_%7Bj%3D1%7D%5EN%20C(t_%7Bi-1%7D%2C%20t_j)%20%2B%20N%20%5Ccdot%20%5Cvarepsilon%7D)
+
 
 In-depth explanation:
 A is a square matrix where both rows and columns represent POS tags (NN, VB, O) plus an initial state (π). Each element A[i,j] represents the probability of transitioning from tag i to tag j.
