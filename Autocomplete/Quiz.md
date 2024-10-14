@@ -7,7 +7,7 @@ Corpus: “In every place of great resort the monster was the fashion. They sang
 
 In the context of our corpus, what is the probability of word “papers” following the phrase “it in the”.
 - [ ] $$P(papers | it\ in\ the) = 0$$
-- [ ] $$P(papers | it\ in\ the) = 1$$
+- [x] $$P(papers | it\ in\ the) = 1$$
 - [ ] $$P(papers | it\ in\ the) = 2/3$$
 - [ ] $$P(papers | it\ in\ the) = 1/2$$
 
