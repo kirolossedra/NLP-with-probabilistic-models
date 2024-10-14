@@ -34,7 +34,7 @@ Given these conditional probabilities:
 - $$P(likes|Mary) = 0.3$$
 - $$P(cats|likes) = 0.1$$
 Approximate the probability of the sentence "`<s>` Mary likes cats `</s>`" using bigrams.
-- [ ] $$P(`<s>` Mary likes cats `</s>`) = 0.0036$$
+- [ ] $$P( \<s\> Mary likes cats \<\/s\>) = 0.0036$$
 - [ ] $$P(`<s>` Mary likes cats `</s>`) = 1$$
 - [ ] $$P(`<s>` Mary likes cats `</s>`) = 0.003$$
 - [ ] $$P(`<s>` Mary likes cats `</s>`) = 0$$
