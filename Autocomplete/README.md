@@ -131,383 +131,68 @@ The sentence probability is the product of the trigram probabilities of each wor
 
 
 
+Certainly! I'll reformat the content, improve its organization, and enclose equations in $$. Here's the revised version:
 
-Add-One Smoothing
-Add-one smoothing solves this by adding 1 to the count of each n-gram, whether it’s seen or unseen. This prevents any n-gram from having a count of zero, ensuring no zero probabilities.
+# Add-k Smoothing in Language Models
 
-The add-one smoothing formula for a bigram (for example) looks like this:
+## Introduction to Add-One Smoothing
 
-𝑃
-(
-𝑤
-𝑖
-∣
-𝑤
-𝑖
-−
-1
-)
-=
-𝐶
-(
-𝑤
-𝑖
-−
-1
-,
-𝑤
-𝑖
-)
-+
-1
-𝐶
-(
-𝑤
-𝑖
-−
-1
-)
-+
-𝑉
-P(w 
-i
-​
- ∣w 
-i−1
-​
- )= 
-C(w 
-i−1
-​
- )+V
-C(w 
-i−1
-​
- ,w 
-i
-​
- )+1
-​
- 
+Add-one smoothing is a technique used to prevent zero probabilities in language models. It works by adding 1 to the count of each n-gram, whether it's seen or unseen.
+
+The add-one smoothing formula for a bigram is:
+
+$$P(w_i|w_{i-1}) = \frac{C(w_{i-1}, w_i) + 1}{C(w_{i-1}) + V}$$
+
 Where:
+- $$C(w_{i-1}, w_i)$$ is the count of the bigram $$(w_{i-1}, w_i)$$
+- $$C(w_{i-1})$$ is the count of the previous word $$w_{i-1}$$
+- $$V$$ is the size of the vocabulary (number of distinct words)
 
-𝐶
-(
-𝑤
-𝑖
-−
-1
-,
-𝑤
-𝑖
-)
-C(w 
-i−1
-​
- ,w 
-i
-​
- ) is the count of the bigram 
-(
-𝑤
-𝑖
-−
-1
-,
-𝑤
-𝑖
-)
-(w 
-i−1
-​
- ,w 
-i
-​
- ),
-𝐶
-(
-𝑤
-𝑖
-−
-1
-)
-C(w 
-i−1
-​
- ) is the count of the previous word 
-𝑤
-𝑖
-−
-1
-w 
-i−1
-​
- ,
-𝑉
-V is the size of the vocabulary (the number of distinct words).
-This formula ensures that every possible bigram gets some probability, including those that haven’t been seen.
+## Limitations of Add-One Smoothing
 
-Why Use 
-𝑘
-k (Add-
-𝑘
-k Smoothing)?
-While add-one smoothing prevents zero probabilities, it has a side effect: It can over-correct for unseen n-grams, especially when dealing with larger corpora. Adding 1 uniformly to every n-gram (even those that appear frequently) can distort the probabilities of the n-grams that actually occur frequently.
+While add-one smoothing prevents zero probabilities, it can over-correct for unseen n-grams, especially in larger corpora. Adding 1 uniformly to every n-gram can distort the probabilities of frequently occurring n-grams.
 
-Add-
-𝑘
-k smoothing generalizes add-one smoothing by allowing you to choose the value of 
-𝑘
-k, giving more control over the amount of smoothing. Here's the formula:
+## Introduction to Add-k Smoothing
 
-𝑃
-(
-𝑤
-𝑖
-∣
-𝑤
-𝑖
-−
-1
-)
-=
-𝐶
-(
-𝑤
-𝑖
-−
-1
-,
-𝑤
-𝑖
-)
-+
-𝑘
-𝐶
-(
-𝑤
-𝑖
-−
-1
-)
-+
-𝑘
-𝑉
-P(w 
-i
-​
- ∣w 
-i−1
-​
- )= 
-C(w 
-i−1
-​
- )+kV
-C(w 
-i−1
-​
- ,w 
-i
-​
- )+k
-​
- 
-Where 
-𝑘
-k is a parameter you can choose, typically a small value (e.g., 
-𝑘
-=
-0.01
-k=0.01, 
-𝑘
-=
-0.1
-k=0.1, etc.).
+Add-k smoothing generalizes add-one smoothing by allowing you to choose the value of $$k$$, providing more control over the amount of smoothing.
 
-Why Scale by 
-𝑘
-k?
-The value of 
-𝑘
-k allows you to control the amount of smoothing. Here's why that’s important:
+The formula for add-k smoothing is:
 
-Larger Corpora: When you have a large corpus, many n-grams will have very high counts. In such cases, adding 1 (as in add-one smoothing) can skew the probabilities too much by overemphasizing the unseen n-grams. A smaller 
-𝑘
-k (like 
-𝑘
-=
-0.01
-k=0.01) ensures that the seen n-grams still dominate the probability distribution.
+$$P(w_i|w_{i-1}) = \frac{C(w_{i-1}, w_i) + k}{C(w_{i-1}) + kV}$$
 
-Fine Control: By using a smaller 
-𝑘
-k, you place less emphasis on the unseen n-grams (because you're adding a smaller value), while still ensuring that they don’t have zero probability. This provides a balance between avoiding zero probabilities and keeping the real counts dominant.
+Where $$k$$ is a parameter you can choose, typically a small value (e.g., $$k = 0.01$$, $$k = 0.1$$, etc.).
 
-Proportionality: Add-one smoothing can give too much weight to rare or unseen n-grams, especially when the vocabulary size 
-𝑉
-V is large. By using a smaller 
-𝑘
-k, the smoothing is scaled down proportionally, so that seen and frequent n-grams maintain higher probabilities compared to unseen ones.
+## Advantages of Add-k Smoothing
 
-Example of the Difference:
-Let’s say in a bigram model, the word pair ("cat", "sleeps") has not been seen in your corpus, while the word pair ("dog", "runs") has been seen 100 times.
-With add-one smoothing:
+1. **Better for Larger Corpora**: A smaller $$k$$ ensures that seen n-grams dominate the probability distribution.
 
-𝑃
-(
-"sleeps"
-∣
-"cat"
-)
-=
-0
-+
-1
-𝐶
-(
-"cat"
-)
-+
-𝑉
-=
-1
-𝐶
-(
-"cat"
-)
-+
-𝑉
-P("sleeps"∣"cat")= 
-C("cat")+V
-0+1
-​
- = 
-C("cat")+V
-1
-​
- 
-𝑃
-(
-"runs"
-∣
-"dog"
-)
-=
-100
-+
-1
-𝐶
-(
-"dog"
-)
-+
-𝑉
-=
-101
-𝐶
-(
-"dog"
-)
-+
-𝑉
-P("runs"∣"dog")= 
-C("dog")+V
-100+1
-​
- = 
-C("dog")+V
-101
-​
- 
-With add-
-𝑘
-k smoothing (let’s use 
-𝑘
-=
-0.1
-k=0.1):
+2. **Fine Control**: Smaller $$k$$ values place less emphasis on unseen n-grams while still avoiding zero probabilities.
 
-𝑃
-(
-"sleeps"
-∣
-"cat"
-)
-=
-0
-+
-0.1
-𝐶
-(
-"cat"
-)
-+
-0.1
-𝑉
-=
-0.1
-𝐶
-(
-"cat"
-)
-+
-0.1
-𝑉
-P("sleeps"∣"cat")= 
-C("cat")+0.1V
-0+0.1
-​
- = 
-C("cat")+0.1V
-0.1
-​
- 
-𝑃
-(
-"runs"
-∣
-"dog"
-)
-=
-100
-+
-0.1
-𝐶
-(
-"dog"
-)
-+
-0.1
-𝑉
-=
-100.1
-𝐶
-(
-"dog"
-)
-+
-0.1
-𝑉
-P("runs"∣"dog")= 
-C("dog")+0.1V
-100+0.1
-​
- = 
-C("dog")+0.1V
-100.1
-​
- 
-Notice that with add-
-𝑘
-k smoothing, the adjustment for the unseen bigram is much smaller than with add-one smoothing. This preserves the real counts more effectively in large datasets, while still ensuring that every possible bigram has a non-zero probability.
+3. **Improved Proportionality**: Scaled-down smoothing maintains higher probabilities for frequent n-grams compared to unseen ones.
 
-Summary
-Why scale by 
-𝑘
-k? To control the amount of smoothing, especially in larger corpora. By choosing a smaller 
-𝑘
-k, you give less emphasis to unseen n-grams while still ensuring no zero probabilities.
-Add-
-𝑘
-k smoothing is more flexible than add-one smoothing and helps strike a balance between ensuring all n-grams have some probability, while not distorting the probabilities of frequently occurring n-grams.
+## Example: Add-One vs Add-k Smoothing
+
+Consider two bigrams: ("cat", "sleeps") unseen, and ("dog", "runs") seen 100 times.
+
+### Add-One Smoothing:
+
+$$P("sleeps"|"cat") = \frac{0 + 1}{C("cat") + V} = \frac{1}{C("cat") + V}$$
+
+$$P("runs"|"dog") = \frac{100 + 1}{C("dog") + V} = \frac{101}{C("dog") + V}$$
+
+### Add-k Smoothing (k = 0.1):
+
+$$P("sleeps"|"cat") = \frac{0 + 0.1}{C("cat") + 0.1V} = \frac{0.1}{C("cat") + 0.1V}$$
+
+$$P("runs"|"dog") = \frac{100 + 0.1}{C("dog") + 0.1V} = \frac{100.1}{C("dog") + 0.1V}$$
+
+Note how add-k smoothing with a small $$k$$ value makes a much smaller adjustment for the unseen bigram compared to add-one smoothing.
+
+## Summary
+
+Add-k smoothing offers more flexibility than add-one smoothing. By choosing a smaller $$k$$, you can:
+1. Give less emphasis to unseen n-grams
+2. Ensure no zero probabilities
+3. Better preserve the probabilities of frequently occurring n-grams
+
+This approach helps strike a balance between smoothing and maintaining the integrity of observed frequency distributions, especially in larger datasets.
