@@ -1,4 +1,74 @@
-Here's a reformatted and improved version of the content, with equations enclosed in $$:
+
+# Sentence Probability in Language Models
+
+## Introduction
+
+In language models, sentence probability can be calculated using n-gram models or Markov chains. This approach considers the conditional probabilities of words based on their predecessors.
+
+## Probability in Naive Bayes
+
+In a Naive Bayes model, each word in a sentence is assumed to be independent of others. The sentence probability is computed as:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = P(w_1) \cdot P(w_2) \cdot P(w_3) \cdot \dots \cdot P(w_n)$$
+
+Or using the product notation:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = \prod_{i=1}^n P(w_i)$$
+
+Where $P(w_i)$ is the probability of word $w_i$, without considering any word history.
+
+## Conditional Probability with Word History
+
+N-gram models and language models account for word history, focusing on immediate predecessors (Markov assumption). The sentence probability becomes:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = P(w_1) \cdot P(w_2 | w_1) \cdot P(w_3 | w_2) \cdot \dots \cdot P(w_n | w_{n-1})$$
+
+Or using the product notation:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = P(w_1) \cdot \prod_{i=2}^n P(w_i | w_{i-1})$$
+
+### Explanation of the Formula
+
+- $P(w_1)$: Probability of the first word in the sentence.
+- $P(w_2 | w_1)$: Conditional probability of the second word, given the first word.
+- $P(w_3 | w_2)$: Conditional probability of the third word, given the second word, and so on.
+
+## Generalization to n-gram Models
+
+Language models can be extended to consider multiple preceding words (n-grams):
+
+### Bigram Model (2-gram)
+
+As shown above, each word depends on the immediately preceding word.
+
+### Trigram Model (3-gram)
+
+Each word depends on the previous two words:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = P(w_1) \cdot P(w_2 | w_1) \cdot P(w_3 | w_1, w_2) \cdot \dots \cdot P(w_n | w_{n-2}, w_{n-1})$$
+
+Or using the product notation:
+
+$$P(w_1, w_2, w_3, \dots, w_n) = P(w_1) \cdot P(w_2 | w_1) \cdot \prod_{i=3}^n P(w_i | w_{i-2}, w_{i-1})$$
+
+This approach more accurately captures word dependencies but requires more data to estimate conditional probabilities for larger n-grams.
+
+## Summary
+
+1. **Naive Bayes**: 
+   $$P(w_1, w_2, \dots, w_n) = \prod_{i=1}^n P(w_i)$$
+   (No word history considered)
+
+2. **Conditional probability with history (Bigram model)**: 
+   $$P(w_1, w_2, \dots, w_n) = P(w_1) \cdot \prod_{i=2}^n P(w_i | w_{i-1})$$
+   (Immediate predecessor considered)
+
+These models provide increasingly sophisticated ways to calculate sentence probabilities by considering word dependencies and context.
+
+
+
+
+--- 
 
 # Trigrams and the Problem of Missing Context
 
