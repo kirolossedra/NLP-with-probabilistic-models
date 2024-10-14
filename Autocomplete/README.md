@@ -1,112 +1,67 @@
-Trigrams and the Problem of Missing Context
-In a trigram model, we look at the previous two words to calculate the probability of a word. However, for the first two words in a sentence, there isn’t enough context—because there aren’t two preceding words.
+Here's a reformatted and improved version of the content, with equations enclosed in $$:
 
-Example with Trigrams
+# Trigrams and the Problem of Missing Context
+
+## Introduction to Trigram Models
+
+In a trigram model, we calculate the probability of a word based on the previous two words. However, this approach faces a challenge at the beginning of a sentence where there aren't enough preceding words.
+
+## The Problem Illustrated
+
 Consider the sentence: "The dog runs."
 
-In a trigram model, to calculate the probability of "The", we would normally look at the previous two words. But there are no words before "The", so the trigram probability for "The" would be undefined.
+In a trigram model:
+- For "The": We need two preceding words, but there are none.
+- For "dog": We only have "The" as context, but we need two words.
 
-Similarly, to calculate the probability of "dog", we would need the two preceding words, but we only have "The". So we don’t have enough context for the first two words.
+This lack of context makes it impossible to calculate trigram probabilities for the first two words using the standard approach.
 
-Solution: Start Tokens for Trigrams
-To solve this, we introduce two start tokens 
-𝑆
-S at the beginning of the sentence. This ensures we have enough context for the first two words.
+## Solution: Start Tokens for Trigrams
 
-For example, we modify the sentence:
+To address this issue, we introduce two start tokens ($$S$$) at the beginning of the sentence. This provides the necessary context for the first two words.
 
-Original: "The dog runs."
-With two start tokens: ( S \ S \ "The dog runs."
-Now, we can calculate the probabilities using trigrams:
+### Example:
 
-First word ("The"): Use the trigram probability 
-𝑃
-(
-The
-∣
-𝑆
-,
-𝑆
-)
-P(The∣S,S). This means "The" is conditioned on the two start tokens, which serve as a context for the beginning of the sentence.
-Second word ("dog"): Use 
-𝑃
-(
-dog
-∣
-𝑆
-,
-The
-)
-P(dog∣S,The). This means the probability of "dog" is conditioned on the start token 
-𝑆
-S and the word "The".
-Third word ("runs"): Use 
-𝑃
-(
-runs
-∣
-The
-,
-dog
-)
-P(runs∣The,dog). Now we have two preceding words to form a trigram.
-Sentence Probability with Trigrams
-Now, the probability of the sentence becomes the product of the trigram probabilities:
+Original sentence: "The dog runs."
+Modified with start tokens: $$S\ S\ \text{"The dog runs."}$$
 
-𝑃
-(
-𝑆
-,
-𝑆
-,
-"The dog runs"
-)
-=
-𝑃
-(
-The
-∣
-𝑆
-,
-𝑆
-)
-⋅
-𝑃
-(
-dog
-∣
-𝑆
-,
-The
-)
-⋅
-𝑃
-(
-runs
-∣
-The
-,
-dog
-)
-P(S,S,"The dog runs")=P(The∣S,S)⋅P(dog∣S,The)⋅P(runs∣The,dog)
-Why Don’t You Use Unigrams and Bigrams for the First Words?
-The idea here is to keep the model consistent. Instead of using a combination of unigrams for the first word, bigrams for the second word, and trigrams for the rest, you handle the lack of context by adding start tokens to make the sentence long enough for the trigram model to work from the very beginning. This way, you are always calculating trigram probabilities throughout the entire sentence.
+Now we can calculate trigram probabilities for each word:
 
-Summary
-Start tokens 
-𝑆
-S are added at the beginning of a sentence to give context for the first one or two words when using a bigram or trigram model.
-For bigram models, one start token 
-𝑆
-S is used to calculate the probability of the first word.
-For trigram models, two start tokens 
-𝑆
- 
-𝑆
-SS are used so that even the first two words have enough context to compute their probabilities.
-The sentence probability is the product of the trigram probabilities of each word, starting from the first one and accounting for the start tokens
+1. First word ("The"): $$P(\text{The}|S,S)$$
+   - "The" is conditioned on two start tokens.
 
+2. Second word ("dog"): $$P(\text{dog}|S,\text{The})$$
+   - "dog" is conditioned on one start token and "The".
+
+3. Third word ("runs"): $$P(\text{runs}|\text{The},\text{dog})$$
+   - We now have two preceding words to form a complete trigram.
+
+## Sentence Probability with Trigrams
+
+The probability of the entire sentence becomes the product of these trigram probabilities:
+
+$$P(S,S,\text{"The dog runs"}) = P(\text{The}|S,S) \cdot P(\text{dog}|S,\text{The}) \cdot P(\text{runs}|\text{The},\text{dog})$$
+
+## Why Not Use Unigrams and Bigrams for the First Words?
+
+The goal is to maintain model consistency. By using start tokens, we ensure that:
+
+1. We always calculate trigram probabilities throughout the entire sentence.
+2. We avoid mixing different n-gram models (unigrams, bigrams, and trigrams) within the same sentence probability calculation.
+
+This approach provides a uniform method for handling context across the entire sentence.
+
+## Summary
+
+1. Start tokens ($$S$$) are added at the beginning of a sentence to provide context for the initial words in n-gram models.
+   - For bigram models: One start token
+   - For trigram models: Two start tokens
+
+2. This method ensures that:
+   - Even the first two words have sufficient context for probability calculations.
+   - The sentence probability is consistently computed as the product of trigram probabilities for each word, including those at the beginning of the sentence.
+
+3. By using start tokens, we maintain a consistent approach to probability calculation across the entire sentence, avoiding the need to mix different n-gram models for different parts of the sentence.
 
 
 
