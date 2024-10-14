@@ -82,7 +82,7 @@ Corpus: "I am happy I am learning"
 In the context of our corpus, what is the estimated probability of the word "can" following the word "I" using the bigram model and add-k-smoothing where k=3?
 - [ ] $$P(can | I) = 0$$
 - [ ] $$P(can | I) = 1$$
-- [ ] $$P(can | I) = 3 / (2 + 3 * 4)$$
+- [x] $$P(can | I) = 3 / (2 + 3 * 4)$$
 - [ ] $$P(can | I) = 3 / (3 * 4)$$
 
 ### Question 8
