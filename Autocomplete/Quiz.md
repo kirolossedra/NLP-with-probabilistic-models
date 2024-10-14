@@ -35,7 +35,7 @@ Given these conditional probabilities:
 - $$P(\</s\> | cats) = 0.6$$
 - $$P(likes | Mary) = 0.3$$
 - $$P(cats | likes) = 0.1$$
-Approximate the probability of the sentence "<s> Mary likes cats </s>" using bigrams.
+Approximate the probability of the sentence $$\<s\>\ Mary\ likes\ cats\ \</s\>$$ using bigrams.
 - [ ] $$P(\<s\>\ Mary\ likes\ cats\ \</s\>) = 0.0036$$
 - [ ] $$P(\<s\>\ Mary\ likes\ cats\ \</s\>) = 1$$
 - [ ] $$P(\<s\>\ Mary\ likes\ cats\ \</s\>) = 0.003$$
