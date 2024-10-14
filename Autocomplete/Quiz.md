@@ -1,4 +1,4 @@
-Got it! Here’s the quiz formatted in GitHub Markdown, with mathematical expressions enclosed in double dollar signs.
+Sure! Here’s the quiz formatted with no spaces in the expressions and without the answer key:
 
 ---
 
@@ -17,13 +17,13 @@ In the context of our corpus, what is the probability of the word "papers" follo
 ### Question 2
 Given these conditional probabilities:
 
-- $$P(Mary) = 0.1$$
-- $$ P(likes) = 0.2 $$
-- $$ P(cats) = 0.3 $$
-- $$ P(Mary|likes) = 0.2 $$
-- $$ P(likes|Mary) = 0.3 $$
-- $$ P(cats|likes) = 0.1 $$
-- $$ P(likes|cats) = 0.4 $$
+- $$P(Mary)=0.1$$
+- $$P(likes)=0.2$$
+- $$P(cats)=0.3$$
+- $$P(Mary|likes)=0.2$$
+- $$P(likes|Mary)=0.3$$
+- $$P(cats|likes)=0.1$$
+- $$P(likes|cats)=0.4$$
 
 Approximate the probability of the sentence “Mary likes cats” using bigrams.
 
@@ -37,13 +37,13 @@ Approximate the probability of the sentence “Mary likes cats” using bigrams.
 ### Question 3
 Given these conditional probabilities:
 
-- $$ P(Mary) = 0.1 $$
-- $$ P(likes) = 0.2 $$
-- $$ P(cats) = 0.3 $$
-- $$ P(Mary|<s>) = 0.2 $$
-- $$ P(</s>|cats) = 0.6 $$
-- $$ P(likes|Mary) = 0.3 $$
-- $$ P(cats|likes) = 0.1 $$
+- $$P(Mary)=0.1$$
+- $$P(likes)=0.2$$
+- $$P(cats)=0.3$$
+- $$P(Mary|<s>)=0.2$$
+- $$P(</s>|cats)=0.6$$
+- $$P(likes|Mary)=0.3$$
+- $$P(cats|likes)=0.1$$
 
 Approximate the probability of the sentence “<s> Mary likes cats </s>” using bigrams.
 
@@ -57,34 +57,34 @@ Approximate the probability of the sentence “<s> Mary likes cats </s>” using
 ### Question 4
 Given the logarithm of these conditional probabilities:
 
-- $$ \log(P(Mary|<s>)) = -2 $$
-- $$ \log(P(</s>|cats)) = -1 $$
-- $$ \log(P(likes|Mary)) = -10 $$
-- $$ \log(P(cats|likes)) = -100 $$
+- $$\log(P(Mary|<s>))=-2$$
+- $$\log(P(</s>|cats))=-1$$
+- $$\log(P(likes|Mary))=-10$$
+- $$\log(P(cats|likes))=-100$$
 
 Approximate the log probability of the sentence “<s> Mary likes cats </s>” using bigrams.
 
-- [ ] $$ \log(P(<s> Mary likes cats </s>)) = -112 $$
-- [ ] $$ \log(P(<s> Mary likes cats </s>)) = -113 $$
-- [ ] $$ \log(P(<s> Mary likes cats </s>)) = 113 $$
-- [ ] $$ \log(P(<s> Mary likes cats </s>)) = 2000 $$
+- [ ] $$\log(P(<s> Mary likes cats </s>))=-112$$
+- [ ] $$\log(P(<s> Mary likes cats </s>))=-113$$
+- [ ] $$\log(P(<s> Mary likes cats </s>))=113$$
+- [ ] $$\log(P(<s> Mary likes cats </s>))=2000$$
 
 ---
 
 ### Question 5
 Given the logarithm of these conditional probabilities:
 
-- $$ \log(P(Mary|<s>)) = -2 $$
-- $$ \log(P(</s>|cats)) = -1 $$
-- $$ \log(P(likes|Mary)) = -10 $$
-- $$ \log(P(cats|likes)) = -100 $$
+- $$\log(P(Mary|<s>))=-2$$
+- $$\log(P(</s>|cats))=-1$$
+- $$\log(P(likes|Mary))=-10$$
+- $$\log(P(cats|likes))=-100$$
 
-Assuming our test set is $$ W = "<s> Mary likes cats </s>" $$, what is the model’s perplexity?
+Assuming our test set is $$W="<s> Mary likes cats </s>"$$, what is the model’s perplexity?
 
-- [ ] $$ \log PP(W) = -113 $$
-- [ ] $$ \log PP(W) = \frac{-1}{5} \cdot (-113) $$
-- [ ] $$ \log PP(W) = \frac{-1}{4} \cdot (-113) $$
-- [ ] $$ \log PP(W) = \frac{-1}{5} \cdot 113 $$
+- [ ] $$\log PP(W)=-113$$
+- [ ] $$\log PP(W)=\frac{-1}{5} \cdot (-113)$$
+- [ ] $$\log PP(W)=\frac{-1}{4} \cdot (-113)$$
+- [ ] $$\log PP(W)=\frac{-1}{5} \cdot 113$$
 
 ---
 
@@ -93,17 +93,17 @@ Given the training corpus and minimum word frequency = 2, how would the vocabula
 
 - Corpus: “<s> I am happy I am learning </s> <s> I am happy I can study </s>”
 
-- [ ] $$ V = (I, am, happy) $$
-- [ ] $$ V = (I, am, happy, learning, can, study) $$
-- [ ] $$ V = (I, am, happy, I, am) $$
-- [ ] $$ V = (I, am, happy, learning, can, study, <UNK>) $$
+- [ ] $$V=(I,am,happy)$$
+- [ ] $$V=(I,am,happy,learning,can,study)$$
+- [ ] $$V=(I,am,happy,I,am)$$
+- [ ] $$V=(I,am,happy,learning,can,study,<UNK>)$$
 
 ---
 
 ### Question 7
 Corpus: “I am happy I am learning”
 
-In the context of our corpus, what is the estimated probability of the word “can” following the word “I” using the bigram model and add-k-smoothing where $$ k = 3 $$?
+In the context of our corpus, what is the estimated probability of the word “can” following the word “I” using the bigram model and add-k-smoothing where $$k=3$$?
 
 - [ ] P(can|I) = 0
 - [ ] P(can|I) = 1
@@ -136,21 +136,6 @@ The perplexity score increases as we increase the number of <UNK> tokens.
 
 - [ ] True
 - [ ] False
-
----
-
-## Answers Key
-
-1. [x] P(papers|it in the) = $$\frac{2}{3}$$ (Correct)
-2. [x] P(Mary likes cats) = 0.008 (Correct)
-3. [x] P(<s> Mary likes cats </s>) = 0.0036 (Correct)
-4. [x] $$ \log(P(<s> Mary likes cats </s>)) = -113 $$ (Correct)
-5. [x] $$ \log PP(W) = \frac{-1}{5} \cdot (-113) $$ (Correct)
-6. [x] $$ V = (I, am, happy, learning, can, study, <UNK>) $$ (Correct)
-7. [x] P(can|I) = $$\frac{3}{2 + 3 \cdot 4}$$ (Correct)
-8. [x] Speech recognition (Correct), [x] Auto-complete (Correct), [x] Auto-correct (Correct), [x] Augmentative communication (Correct), [x] Sentiment Analysis (Correct)
-9. [x] False (Correct)
-10. [x] True (Correct)
 
 ---
 
