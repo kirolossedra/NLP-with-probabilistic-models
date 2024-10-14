@@ -17,7 +17,7 @@ In the context of our corpus, what is the probability of the word "papers" follo
 ### Question 2
 Given these conditional probabilities:
 
-- $$ P(Mary) = 0.1 $$
+- $$P(Mary) = 0.1$$
 - $$ P(likes) = 0.2 $$
 - $$ P(cats) = 0.3 $$
 - $$ P(Mary|likes) = 0.2 $$
