@@ -49,7 +49,7 @@ Given the logarithm of these conditional probabilities:
 - $$log(P(cats | likes)) = -100$$
 Approximate the log probability of the sentence "<s> Mary likes cats </s>" using bigrams.
 - [ ] $$log(P(\<s\>\ Mary\ likes\ cats\ \</s\>)) = -112$$
-- [ ] $$log(P(\<s\>\ Mary\ likes\ cats\ \</s\>)) = -113$$
+- [x] $$log(P(\<s\>\ Mary\ likes\ cats\ \</s\>)) = -113$$
 - [ ] $$log(P(\<s\>\ Mary\ likes\ cats\ \</s\>)) = 113$$
 - [ ] $$log(P(\<s\>\ Mary\ likes\ cats\ \</s\>)) = 2000$$
 
@@ -62,14 +62,14 @@ Given the logarithm of these conditional probabilities:
 Assuming our test set is W="<s> Mary likes cats </s>", what is the model's perplexity?
 - [ ] $$log\ PP(W) = -113$$
 - [ ] $$log\ PP(W) = (-1/5) * (-113)$$
-- [ ] $$log\ PP(W) = (-1/4) * (-113)$$
+- [x] $$log\ PP(W) = (-1/4) * (-113)$$
 - [ ] $$log\ PP(W) = (-1/5) * 113$$
 
 
 ### Question 6
 Given the training corpus and minimum word frequency = 2, how would the vocabulary for the corpus preprocessed with \<UNK\> look like?
 - Corpus: "\<s\> I am happy I am learning \</s\> \<s\> I am happy I can study \</s\>"
-- [ ] $$V = (I, am, happy)$$
+- [x] $$V = (I, am, happy)$$
 - [ ] $$V = (I, am, happy, learning, can, study)$$
 - [ ] $$V = (I, am, happy, I, am)$$
 - [ ] $$V = (I, am, happy, learning, can, study, \<UNK\>)$$
@@ -87,10 +87,10 @@ In the context of our corpus, what is the estimated probability of the word "can
 
 ### Question 8
 Which of the following are applications of n-gram language models?
-- [ ] Speech recognition
-- [ ] Auto-complete
+- [x] Speech recognition
+- [x] Auto-complete
 - [ ] Auto-correct
-- [ ] Augmentative communication
+- [x] Augmentative communication
 - [ ] Sentiment Analysis
 
 ### Question 9
