@@ -63,13 +63,17 @@ Assuming our test set is W="<s> Mary likes cats </s>", what is the model's perpl
 - [ ] $$log\ PP(W) = (-1/4) * (-113)$$
 - [ ] $$log\ PP(W) = (-1/5) * 113$$
 
+
 ### Question 6
-Given the training corpus and minimum word frequency = 2, how would the vocabulary for the corpus preprocessed with <UNK> look like?
-- Corpus: "<s> I am happy I am learning </s> <s> I am happy I can study </s>"
+Given the training corpus and minimum word frequency = 2, how would the vocabulary for the corpus preprocessed with \<UNK\> look like?
+- Corpus: "\<s\> I am happy I am learning \</s\> \<s\> I am happy I can study \</s\>"
 - [ ] $$V = (I, am, happy)$$
 - [ ] $$V = (I, am, happy, learning, can, study)$$
 - [ ] $$V = (I, am, happy, I, am)$$
 - [ ] $$V = (I, am, happy, learning, can, study, \<UNK\>)$$
+
+
+This should prevent any unintended strikethrough formatting in GitHub Markdown while preserving the intended meaning of the tags.
 
 ### Question 7
 Corpus: "I am happy I am learning"
