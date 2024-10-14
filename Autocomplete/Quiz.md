@@ -1,9 +1,11 @@
-I understand. I'll update the quiz to use backslashes to escape the special characters and add spaces within the probability functions where sentences are involved. Here's the revised version:
 
 # Language Model Quiz
 
 ### Question 1
-In the context of our corpus, what is the probability of the word "papers" following the phrase "it in the"?
+
+Corpus: “In every place of great resort the monster was the fashion. They sang of it in the cafes, ridiculed it in the papers, and represented it on the stage. ” (Jules Verne, Twenty Thousand Leagues under the Sea) 
+
+In the context of our corpus, what is the probability of word “papers” following the phrase “it in the”.
 - [ ] $$P(papers | it\ in\ the) = 0$$
 - [ ] $$P(papers | it\ in\ the) = 1$$
 - [ ] $$P(papers | it\ in\ the) = 2/3$$
