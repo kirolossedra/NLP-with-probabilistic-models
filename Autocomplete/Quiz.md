@@ -96,11 +96,11 @@ Which of the following are applications of n-gram language models?
 ### Question 9
 The higher the perplexity score, the more our corpus will make sense.
 - [ ] True
-- [ ] False
+- [x] False
 
 ### Question 10
 The perplexity score increases as we increase the number of <UNK> tokens.
 - [ ] True
-- [ ] False
+- [x] False
 
-This version uses backslashes to escape special characters like < and > when they appear within mathematical expressions. It also adds spaces between words in probability functions where sentences are involved, both for sentences with and without tags. The formatting should now display correctly in GitHub Markdown while preserving the intended meaning and structure of the quiz.
+
