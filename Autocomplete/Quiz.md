@@ -21,7 +21,7 @@ Given these conditional probabilities:
 - $$P(cats | likes) = 0.1$$
 - $$P(likes | cats) = 0.4$$
 Approximate the probability of the sentence "Mary likes cats" using bigrams.
-- [ ] $$P(Mary\ likes\ cats) = 0.003$$
+- [x] $$P(Mary\ likes\ cats) = 0.003$$
 - [ ] $$P(Mary\ likes\ cats) = 0.008$$
 - [ ] $$P(Mary\ likes\ cats) = 1$$
 - [ ] $$P(Mary\ likes\ cats) = 0$$
